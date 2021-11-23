@@ -3,7 +3,7 @@ const app = express()
 var multer = require('multer')
 var myStorage = multer.diskStorage({
   destination: function(req, file, cb){
-    cb(null, 'F:/p2_trong/public/img/sussgest')
+    cb(null, 'F:/store_app_react_json_server/public/img/sussgest')
   }
 , 
   filename: function(req, file, cb){
@@ -12,7 +12,7 @@ var myStorage = multer.diskStorage({
 })
 var productSorage = multer.diskStorage({
   destination: function(req, file, cb){
-    cb(null, 'F:/p2_trong/public/img/products')
+    cb(null, 'F:/store_app_react_json_server/public/img/products')
   }
 , 
   filename: function(req, file, cb){

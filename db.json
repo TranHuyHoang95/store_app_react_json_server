@@ -62,6 +62,10 @@
         {
           "idUser": 2,
           "score": 2
+        },
+        {
+          "idUser": 5,
+          "score": 5
         }
       ],
       "Decription": "Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.",
@@ -69,7 +73,7 @@
       "Type": "Whisky",
       "Status": "Sale",
       "Date": 20190904,
-      "RatingScore": 2.5,
+      "RatingScore": 3.3,
       "NumberOfProducts": 10
     },
     {
@@ -124,8 +128,13 @@
       "Price": 336,
       "OldPrice": 456,
       "Color": "green",
-      "Rating": [],
-      "RatingScore": 0,
+      "Rating": [
+        {
+          "idUser": 5,
+          "score": 2
+        }
+      ],
+      "RatingScore": 2,
       "Decription": "Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.",
       "Img": "/img/products/product-6.jpg",
       "Type": "Johnnie Walker",
@@ -542,7 +551,17 @@
       "Password": "1234",
       "Cart": [],
       "Type": "user",
-      "id": 5
+      "id": 5,
+      "ListRatting": [
+        {
+          "idWine": 6,
+          "score": 2
+        },
+        {
+          "idWine": 3,
+          "score": 5
+        }
+      ]
     },
     {
       "FirstName": "trong",
@@ -562,6 +581,11 @@
       "Img": "file_1588758490507.jpg",
       "Description": "nguyen",
       "id": 1
+    },
+    {
+      "Img": "file_1637404558785.jpg",
+      "Description": "ttt",
+      "id": 2
     }
   ],
   "order": [

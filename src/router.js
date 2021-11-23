@@ -14,64 +14,63 @@ import ListOrder from "./container/listOrder/ListOrder";
 import Error from "./container/error/Error";
 import { Redirect } from "react-router-dom";
 
-const router = (status) =>{
-    return [
-        {
-            path:"/",
-            exact:true,
-            main : () => <Home/>
-        },
-        {
-            path:"/introduce",
-            main : () => <Introduce/>
-        },
-        {
-            path:"/login",
-            main : () => status ? <Redirect to="/" />:<Login/>
-        },
-        {
-            path:"/signup",
-            main : () => <Signup/>
-        },
-        {
-            path:"/profile",
-            main : () => status ?  <Profile/> : <Redirect to="/login" />
-        },
-        {
-            path:"/product/:page",
-            main : () => <Product/>
-        },
-        {
-            path:"/productDetail/:id",
-            main : () => <ProductDetail/>
-        },
-        ,
-        {
-            path:"/cartDetail",
-            main : () => status ? <CartDetail/> : <Redirect to="/login" />
-        },
-        {
-            path:"/recentView",
-            main : () => status ? <RecentView/> : <Redirect to="/login" />
-        },
-        {
-            path:"/suggestProduct",
-            main : () => <SuggestProdut/>
-        },
-        {
-            path:"/confirmInfor/:totalPrice",
-            main : () => status ? <ConfirmInfor/> :<Redirect to="/login" />
-        },
-        {
-            path:"/listOrder",
-            main : () => status ? <ListOrder/> : <Redirect to="/login" />
-        },
-        {
-            path:"*",
-            main : () => <Error/>
-        },
-    ]
-
-}
+const router = (status) => {
+  return [
+    {
+      path: "/",
+      exact: true,
+      main: () => <Home />,
+    },
+    {
+      path: "/introduce",
+      main: () => <Introduce />,
+    },
+    {
+      path: "/login",
+      main: () => (status ? <Redirect to="/" /> : <Login />),
+    },
+    {
+      path: "/signup",
+      main: () => <Signup />,
+    },
+    {
+      path: "/profile",
+      main: () => (status ? <Profile /> : <Redirect to="/login" />),
+    },
+    {
+      path: "/product/:page",
+      main: () => <Product />,
+    },
+    {
+      path: "/productDetail/:id",
+      main: () => <ProductDetail />,
+    },
+    ,
+    {
+      path: "/cartDetail",
+      main: () => (status ? <CartDetail /> : <Redirect to="/login" />),
+    },
+    {
+      path: "/recentView",
+      main: () => (status ? <RecentView /> : <Redirect to="/login" />),
+    },
+    {
+      path: "/suggestProduct",
+      main: () => <SuggestProdut />,
+    },
+    {
+      path: "/confirmInfor/:totalPrice",
+      main: () => (status ? <ConfirmInfor /> : <Redirect to="/login" />),
+    },
+    {
+      path: "/listOrder",
+      main: () => (status ? <ListOrder /> : <Redirect to="/login" />),
+    },
+    {
+      path: "*",
+      main: () => <Error />,
+    },
+  ];
+};
 
 export default router;
