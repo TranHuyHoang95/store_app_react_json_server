@@ -40,23 +40,23 @@
         padding-top: initial;
         padding-bottom: initial;
         display: block;
-        color: $color-deepgrey;
+        color: #0ccdc5;
     }
     &__name{
         font-size: 25.08vw;
         font-family: $font-poster;
-        left: 12.54%;
+        left: 18%;
         top:1vh;
     }
     &__sub{
-        top:27%;
-        left:43%;
+        top: 36%;
+        left: 51%;
         font-size: 5.47vw;
         font-family: $font-poster;
     }
     &__time{
         top:64%;
-        left: 69%;
+        left: 64%;
         font-size: 2.989vw;
         font-family: $font-poster2;
         font-style: italic;

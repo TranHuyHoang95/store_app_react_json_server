@@ -1,19 +1,19 @@
 import React,{useEffect} from 'react';
 import { useSelector,useDispatch } from "react-redux";
 import "./home.scss";
-import Wine from '../../component/wine/Wine';
+import Canvas from '../../component/canvas/Canvas';
 import { fetchHotTrendWine,fetchNewWine } from "../../redux";
 import ScrollToTop from "../App/ScrollToTop";
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
-    const listWine = useSelector(state=>state.newWine);
+    const listCanvas = useSelector(state=>state.newWine);
     const hotTrendWine = useSelector(state=>state.hotWine);
     const user = useSelector(state => state.user.data)
     const dispatch= useDispatch();
     const { t } = useTranslation();
     useEffect(() => {
-        if( user.Type !== 'admin'){
+        if( user.Role !== 'admin'){
             dispatch(fetchHotTrendWine());
             dispatch(fetchNewWine())
         if(window.innerWidth >=1092){
@@ -58,8 +58,8 @@ const Home = () => {
             </section>
             <section className="productH">
                 <div className="container">
-                    <div className="productH__background"><img src="./img/bg-3.jpg" /></div>
-                    <div className="productH__detail">
+                    {/* <div className="productH__background"><img src="./img/bg-3.jpg" /></div> */}
+                    {/* <div className="productH__detail">
                         <div className="productH__img"> <img src="./img/14.jpg" />
                             <div className="productH__img-type">
                                 <p> {t('common.new')} </p>
@@ -90,63 +90,63 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
-            <Wine listWine={listWine} title="san phẩm mới" />
+            <Canvas listCanvas={listCanvas} title="New products" />
             <section className="gallery">
                 <div className="gallery__list">
-                    <div className="gallery__img"> <img src="img/gl-1.jpg" />
+                    <div className="gallery__img"> <img src="img/thumb8.jpeg" />
                         <div className="gallery__brand">
                             <p className="gallery__brand-time"> {t('common.1987')} </p>
-                            <p className="gallery__brand-name"> {t('common.ruou')} </p>
+                            <p className="gallery__brand-name"> {t('common.canvas')} </p>
                         </div>
                     </div>
-                    <div className="gallery__img"> <img src="img/gl-2.jpg" />
+                    <div className="gallery__img"> <img src="img/thumb1.jpg" />
                         <div className="gallery__brand">
                             <p className="gallery__brand-time">{t('common.1987')}</p>
-                            <p className="gallery__brand-name">{t('common.ruou')}</p>
+                            <p className="gallery__brand-name">{t('common.canvas')}</p>
                         </div>
                     </div>
-                    <div className="gallery__img"> <img src="img/gl-3.png" />
+                    <div className="gallery__img"> <img src="img/thumb2.jpg" />
                         <div className="gallery__brand">
                             <p className="gallery__brand-time">{t('common.1987')}</p>
-                            <p className="gallery__brand-name">{t('common.ruou')}</p>
+                            <p className="gallery__brand-name">{t('common.canvas')}</p>
                         </div>
                     </div>
-                    <div className="gallery__img"> <img src="img/gl-4.png" />
+                    <div className="gallery__img"> <img src="img/thumb3.jpg" />
                         <div className="gallery__brand">
                             <p className="gallery__brand-time">{t('common.1987')}</p>
-                            <p className="gallery__brand-name">{t('common.ruou')}</p>
+                            <p className="gallery__brand-name">{t('common.canvas')}</p>
                         </div>
                     </div>
-                    <div className="gallery__img"> <img src="img/gl-5.png" />
+                    <div className="gallery__img"> <img src="img/thumb4.jpg" />
                         <div className="gallery__brand">
                             <p className="gallery__brand-time">{t('common.1987')}</p>
-                            <p className="gallery__brand-name">{t('common.ruou')}</p>
+                            <p className="gallery__brand-name">{t('common.canvas')}</p>
                         </div>
                     </div>
-                    <div className="gallery__img"> <img src="img/gl-6.jpg" />
+                    <div className="gallery__img"> <img src="img/thumb5.png" />
                         <div className="gallery__brand">
                             <p className="gallery__brand-time">{t('common.1987')}</p>
-                            <p className="gallery__brand-name">{t('common.ruou')}</p>
+                            <p className="gallery__brand-name">{t('common.canvas')}</p>
                         </div>
                     </div>
-                    <div className="gallery__img"> <img src="img/gl-7.png" />
+                    <div className="gallery__img"> <img src="img/thumb6.jpg" />
                         <div className="gallery__brand">
                             <p className="gallery__brand-time">{t('common.1987')}</p>
-                            <p className="gallery__brand-name">{t('common.ruou')}</p>
+                            <p className="gallery__brand-name">{t('common.canvas')}</p>
                         </div>
                     </div>
-                    <div className="gallery__img"> <img src="img/gl-8.png" />
+                    <div className="gallery__img"> <img src="img/thumb7.jpg" />
                         <div className="gallery__brand">
                             <p className="gallery__brand-time">{t('common.1987')}</p>
-                            <p className="gallery__brand-name">{t('common.ruou')}</p>
+                            <p className="gallery__brand-name">{t('common.canvas')}</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <Wine listWine={hotTrendWine} title="san phẩm xu hướng"/>
+            <Canvas listCanvas={hotTrendWine} title="Trending products"/>
             <section className="block">
                 <div className="container">
                     <div className="blog">

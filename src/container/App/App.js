@@ -24,8 +24,8 @@ function App() {
     if (user.ready) {
       setStatus(user.status);
     }
-    if (typeof user.data.Type !== undefined) {
-      setType(user.data.Type);
+    if (typeof user.data.Role !== undefined) {
+      setType(user.data.Role);
     }
   }, [user]);
   const loadRouter = useMemo(() => {

@@ -7,7 +7,7 @@ export const fetchProduct =  (page,type='',color='',rateProduct=0) =>{
         try {
             let string = `${host}_page=${page}&_limit=6`;
             if(type !== ''){
-                string += `&Type=${type}`;
+                string += `&Category=${type}`;
             }
             if(color !== ''){
                 string += `&Color=${color}`;
@@ -32,7 +32,7 @@ export const  getPageAmount = async (type='',color='',rateProduct=0) =>{
     try {
         let string = `${host}`;
         if(type !== ''){
-            string += `&Type=${type}`;
+            string += `&Category=${type}`;
         }
         if(color !== ''){
             string += `&Color=${color}`;

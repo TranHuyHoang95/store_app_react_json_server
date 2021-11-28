@@ -1,8 +1,8 @@
 import React,{useRef,useState,useEffect} from 'react';
-import ItemWine from './ItemWine';
+import ItemCanvas from './ItemCanvas';
 
-const Wine = ({listWine,title}) => {
-    const refWine = useRef(null)
+const Canvas = ({listCanvas,title}) => {
+    const refCanvas = useRef(null)
     const [count,setCount] = useState(0);
     useEffect(() => {
         window.addEventListener('resize', () =>{
@@ -11,7 +11,7 @@ const Wine = ({listWine,title}) => {
     }, []);
     useEffect(() => {
         let total= count*280;
-        const item =  refWine.current;
+        const item =  refCanvas.current;
         const max =  Math.ceil((item.scrollWidth - item.clientWidth)/280);
         if( count <0){
             setCount(0);
@@ -30,8 +30,8 @@ const Wine = ({listWine,title}) => {
     }
     const loadItem = () =>{
         return  (
-            listWine.map(wine =>
-                <ItemWine key={wine.id} wine={wine} />
+            listCanvas.map(wine =>
+                <ItemCanvas key={wine.id} wine={wine} />
             )
         )
     }
@@ -40,7 +40,7 @@ const Wine = ({listWine,title}) => {
             <div className="container">
                 <p className="introduce__title">{title} </p><img className="introduce__sub" src="img/title-dark.png" />
                 <div className="newproduct">
-                    <div className="newproduct__list" ref={refWine}>
+                    <div className="newproduct__list" ref={refCanvas}>
                         {loadItem()}
                     </div>
                 </div>
@@ -51,4 +51,4 @@ const Wine = ({listWine,title}) => {
     );
 }
 
-export default Wine;
+export default Canvas;

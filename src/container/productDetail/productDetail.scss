@@ -19,10 +19,10 @@
         padding: $px20 0;
     }
     &__img{
-        width: 550px;
+        // width: 550px;
         img{
             margin: 0 auto;
-            @include setImg(9.93vw,60.87vh ,contain )
+            // @include setImg(9.93vw,60.87vh ,contain )
         }
     }
     &__info{

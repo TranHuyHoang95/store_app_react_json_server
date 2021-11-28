@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {addToCart} from "../../common/mixin";
 import { useTranslation } from 'react-i18next';
 
-const ItemWine = ({wine}) => {
+const ItemCanvas = ({wine}) => {
     const { t } = useTranslation();
     const {status} = useSelector(state => state.user);
     const dispatch = useDispatch();
@@ -36,4 +36,4 @@ const ItemWine = ({wine}) => {
     );
 }
 
-export default ItemWine;
+export default ItemCanvas;

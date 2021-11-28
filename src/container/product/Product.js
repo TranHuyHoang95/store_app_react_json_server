@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import  "./product.scss";
-import WineP from '../../component/wine/WineP';
+import WineP from '../../component/canvas/CanvasP';
 import { fetchProduct,getPageAmount } from "../../redux";
 import Pagination from '../../component/product/Pagination';
 import ProductType from '../../component/product/ProductType';
@@ -47,15 +47,15 @@ const Product = () => {
                             <div className="product__icon"><img src={process.env.PUBLIC_URL+'/img/titleleft-dark.png'} alt="" /></div>
                             <ProductType  type={type} setType={setType}/>
                         </div>
-                        <ProductColor color={color} setColor={setColor} />
+                        {/* <ProductColor color={color} setColor={setColor} /> */}
                         <ProductRate rate={rate} setRate={setRate}/>
                         <div className="product__advertisement">
                             <div className="product__advertisement-img">
-                                <img src={process.env.PUBLIC_URL+'/img/lf-1.jpg'} alt="" />
-                                <img className="product__advertisement-under" src={process.env.PUBLIC_URL+'/img/bg-4.jpg'} alt="" />
-                                <div className="product__advertisement-name"> {t('common.ruouVang')} </div>
+                                <img src={process.env.PUBLIC_URL+'/img/thumb3.jpg'} alt="" />
+                                {/* <img className="product__advertisement-under" src={process.env.PUBLIC_URL+'/img/bg-4.jpg'} alt="" /> */}
+                                {/* <div className="product__advertisement-name"> {t('common.ruouVang')} </div>
                                 <div className="product__advertisement-type">  {t('common.do')} </div>
-                                <div className="product__advertisement-time"> {t('common.1980')} </div>
+                                <div className="product__advertisement-time"> {t('common.1980')} </div> */}
                             </div>
                         </div>
                     </div>

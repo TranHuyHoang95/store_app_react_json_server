@@ -14,7 +14,7 @@ const Introduce = () => {
             </section>
             <section className="introduceP">
                 <div className="container">
-                    <div className="introduceP__img"> <img src="./img/bg-3.jpg" alt="" /></div>
+                    <div className="introduceP__img"> <img src="./img/thumb2.jpg" alt="" /></div>
                     <div className="introduceP__content">
                         <p className="introduceP__content-name"> {t('common.welcome')} </p>
                         <p className="introduceP__content-text"> <span> {t('common.text3')} </span></p>

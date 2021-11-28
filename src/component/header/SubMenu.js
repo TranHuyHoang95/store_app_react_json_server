@@ -18,7 +18,7 @@ const SubMenu = ({user}) => {
     return (
         <div className="contact-menu">
             <div id="slide">
-                <img src={process.env.PUBLIC_URL+'/img/slide-1.jpg'} alt="" />
+                <img src={process.env.PUBLIC_URL+'/img/background.jpg'} alt="" />
                 <div className="container -letter">
                 </div>
                 <p className="contact-menu__name">{t('header.sub.3')}</p>

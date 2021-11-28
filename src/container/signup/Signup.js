@@ -44,7 +44,7 @@ const Signup = () => {
                     Email:user.Email,
                     Password:user.Password,
                     Cart : [],
-                    Type:"user"
+                    Role:"user"
                 }).then( res =>{
                     if(res.status === 201){
                         setMessage("");

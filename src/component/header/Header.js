@@ -22,8 +22,8 @@ return (
         <div className="header__menu">
             <div className="brand">
                 <img className="brand__background" src="../img/brand.png" alt="" />
-                <p className="brand__name"> {t('common.wineHourse')} </p>
-                <p className="brand__sub">{t('common.since1980')} </p>
+                <p className="brand__name"> {t('common.foxStore')} </p>
+                <p className="brand__sub">{t('common.since2021')} </p>
                 <img className="brand__deer" src="../img/deer.png" alt="" />
             </div>
             <div className="menu" ref={toggleMenu}>

@@ -15,10 +15,9 @@ const ProductDetail = () => {
         Name: "",
         Price: 0,
         OldPrice: 0,
-        Color: "",
         Decription: "",
         Img: "",
-        Type: "",
+        Category: "",
         Status: "",
         NumberOfProducts:0,
         Rating: [],
@@ -110,7 +109,7 @@ const ProductDetail = () => {
                         <div className="admDetail__box">
                             <span>{t('common.numberOfProduct')} :</span> <input type="text" name="NumberOfProducts" value={wine.NumberOfProducts} onChange={onHandleChange}/>
                         </div>
-                        <div className="admDetail__box">
+                        {/* <div className="admDetail__box">
                             <span>{t('common.color')} :</span>
                             <select name="Color" value={wine.Color} onChange={onHandleChange} >
                                 <option value=''></option>
@@ -119,7 +118,7 @@ const ProductDetail = () => {
                                 <option value='yellow'>{t('common.yellow')}</option>
                                 <option value='red'>{t('common.red')}</option>
                             </select>
-                        </div>
+                        </div> */}
                         <div className="admDetail__box">
                             <span>{t('common.status')} :</span>
                             <select name="Status" value={wine.Status} onChange={onHandleChange}>
@@ -131,12 +130,12 @@ const ProductDetail = () => {
                         </div>
                         <div className="admDetail__box">
                             <span>{t('common.type')} :</span>
-                            <select name="Type" value={wine.Type} onChange={onHandleChange}>
+                            <select name="Category" value={wine.Category} onChange={onHandleChange}>
                                 <option value=''></option>
-                                <option value='Chivas'>{t('common.chivas')}</option>
-                                <option value='Johnnie Walker'>{t('common.johnnieWalker')}</option>
-                                <option value='Whisky'>{t('common.whisky')}</option>
-                                <option value='Glenmorangie'>{t('common.glenmorangie')}</option>
+                                <option value='Gift For Son'>{t('common.giftForSon')}</option>
+                                <option value='Gift For Daughter'>{t('common.johnnieWalker')}</option>
+                                <option value='Gift For Dad'>{t('common.giftForDad')}</option>
+                                <option value='Gift For Mom'>{t('common.giftForMom')}</option>
                             </select>
                         </div>
                         <div className="admDetail__box">

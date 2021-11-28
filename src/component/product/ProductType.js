@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const ProductType = ({type,setType}) => {
     const { t } = useTranslation();
-    const listType = ["Chivas", "Johnnie Walker", "Whisky", "Glenmorangie"];
+    const listType = ["Gift For Son", "Gift For Daughter", "Gift For Dad", "Gift For Mom"];
     const history = useHistory();
     const onHandleChange = (event) => {
         let target = event.target;

@@ -57,7 +57,7 @@ const UserDetail = () => {
                 } else{
                     const newUser = Object.assign(user,{
                         Cart : [],
-                        Type:"user"
+                        Role:"user"
                     })
                     dispatch(addNewUser(newUser));
                     history.push('/user');

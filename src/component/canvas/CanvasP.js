@@ -1,11 +1,11 @@
 import React from 'react';
-import  ItemWine  from "./ItemWine";
+import  ItemCanvas  from "./ItemCanvas";
 
-const WineP = ({products}) => {
+const CanvasP = ({products}) => {
     const loadItem = () =>{
         return  (
             products.map(wine =>
-                <ItemWine key={wine.id} wine={wine} />
+                <ItemCanvas key={wine.id} wine={wine} />
             )
         )
     }
@@ -17,4 +17,4 @@ const WineP = ({products}) => {
     );
 }
 
-export default WineP;
+export default CanvasP;
